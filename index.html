@@ -1,0 +1,179 @@
+<section>
+  <style>
+    p {
+      margin: 0;
+    }
+
+    .disclosure-container {
+      margin: 32px 0 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Styles for small devices */
+    .sm-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .score-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.4rem;
+    }
+
+    /* All but first instance */
+    .score-container ~ .score-container {
+      margin-top: 16px;
+    }
+
+    .score-label {
+      margin-left: auto;
+    }
+
+    .score-value {
+      font-weight: 600;
+    }
+
+    .title {
+      text-wrap: pretty;
+      text-align: center;
+    }
+
+    .grade {
+      font-weight: 600;
+      padding-bottom: 8px;
+    }
+
+    /* Styles for large devices */
+    .lg-container {
+      display: none; /* by default, start hidden */
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .score-grid {
+      display: grid;
+      gap: 18px 10px;
+      grid-template-columns: min-content repeat(4, 1fr);
+    }
+
+    .label {
+      font-weight: 600;
+    }
+    .row-label {
+      text-align: left;
+    }
+    .column-label {
+      text-align: center;
+    }
+
+    .value {
+      text-align: center;
+    }
+
+    /* Switch content based on device size */
+    @media (min-width: 760px) {
+      .lg-container {
+        display: flex;
+      }
+      .sm-container {
+        display: none;
+      }
+    }
+  </style>
+  <!-- Only displays on small devices -->
+  <div class="sm-container">
+    <h1 class="title">2023 Kentucky State Assessment Results</h1>
+    <div class="score-container">
+      <p class="grade">Elementary</p>
+      <p class="score-item">
+        Math Proficient: <span class="score-value">31%</span>
+      </p>
+      <p class="score-item">
+        Math Distinguished: <span class="score-value">7%</span>
+      </p>
+      <p class="score-item">
+        Reading Proficient: <span class="score-value">28%</span>
+      </p>
+      <p class="score-item">
+        Reading Distinguished: <span class="score-value">21%</span>
+      </p>
+    </div>
+
+    <div class="score-container">
+      <p class="grade">Middle</p>
+      <p class="score-item">
+        Math Proficient: <span class="score-value">30%</span>
+      </p>
+      <p class="score-item">
+        Math Distinguished: <span class="score-value">9%</span>
+      </p>
+      <p class="score-item">
+        Reading Proficient: <span class="score-value">36%</span>
+      </p>
+      <p class="score-item">
+        Reading Distinguished: <span class="score-value">18%</span>
+      </p>
+    </div>
+
+    <div class="score-container">
+      <p class="grade">High</p>
+      <p class="score-item">
+        Math Proficient: <span class="score-value">25%</span>
+      </p>
+      <p class="score-item">
+        Math Distinguished: <span class="score-value">11%</span>
+      </p>
+      <p class="score-item">
+        Reading Proficient: <span class="score-value">33%</span>
+      </p>
+      <p class="score-item">
+        Reading Distinguished: <span class="score-value">19%</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Only displays on large devices -->
+  <div class="lg-container">
+    <h1 class="title">2023 Kentucky State Assessment Results</h1>
+    <div class="score-grid">
+      <div></div>
+      <div class="label column-label">Math Proficient</div>
+      <div class="label column-label">Math Distinguished</div>
+      <div class="label column-label">Reading Proficient</div>
+      <div class="label column-label">Reading Distinguished</div>
+      <div class="label row-label">Elementary</div>
+      <div class="value">31%</div>
+      <div class="value">7%</div>
+      <div class="value">28%</div>
+      <div class="value">21%</div>
+      <div class="label row-label">Middle</div>
+      <div class="value">30%</div>
+      <div class="value">9%</div>
+      <div class="value">36%</div>
+      <div class="value">18%</div>
+      <div class="label row-label">High</div>
+      <div class="value">25%</div>
+      <div class="value">11%</div>
+      <div class="value">33%</div>
+      <div class="value">19%</div>
+    </div>
+  </div>
+
+  <div class="disclosure-container">
+    <p>
+      More information can be found on the
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        href="https://www.kyschoolreportcard.com/organization/5553?year=2023"
+        >Kentucky School Report Card</a
+      >.
+    </p>
+  </div>
+</section>
